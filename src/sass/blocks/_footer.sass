@@ -1,0 +1,47 @@
+.footer
+    padding-bottom: 44px
+    background-color: $lightblueB
+    &__wrapper
+        display: flex
+        width: 100%
+    &__logo 
+        margin-top: 9px
+        width: 170px
+        cursor: pointer
+        &-img2
+            margin-top: 22px
+            margin-left: 12px
+    &__list
+        margin-top: 34px
+        margin-left: 110px
+        display: flex
+        list-style: none
+        &_1600
+            display: none
+    &__item
+        &:not(:first-child)
+            margin-left: 40px
+    &__sublist
+        margin-top: 22px
+        list-style: none
+        &-item
+            @include link
+            &:not(:first-child)
+                margin-top: 10px
+    &__call
+        position: relative
+        margin-top: 34px
+        margin-left: 80px
+        font-size: 16px
+        font-weight: bold
+        @include link
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            left: -25px
+            width: 16px
+            height: 16px  
+            background: url('../img/icons/footer-call.svg') center no-repeat
+    
+        

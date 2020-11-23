@@ -1,0 +1,170 @@
+.service
+    padding-top: 64px
+    background-color: $lightblueC
+    &__subtitle
+        &_main
+            margin-top: 45px
+        &_secondary
+            display: inline-block
+    &__call
+        display: block
+        margin-top: 35px
+        font-size: 36px
+        color: $blue
+        @include link
+        &-descr
+            display: block
+            margin-top: 20px
+    &__list
+        display: flex
+        margin-top: 20px
+        list-style: none
+    &__item
+        position: relative
+        &:nth-child(2)
+            margin-left: 25px
+        &:last-child 
+            .service__link
+                margin-left: 12px
+            &::before
+                left: 20px
+                width: 42px
+                height: 44px
+                background: url('../img/icons/support.svg') center no-repeat
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            left: 10px
+            transform: translateY(-50%)
+            width: 38px
+            height: 47px  
+            background: url('../img/icons/download.svg') center no-repeat
+    &__link
+        display: flex
+        align-items: center
+        padding: 0 35px 0 60px
+        max-width: 408px
+        width: 100%
+        height: 77px
+        background-color: #C2E8FF
+        font-size: 16px
+        line-height: 20px
+        font-weight: bold
+        @media (min-width: 992px) 
+            &:hover
+                background-color: #8DD3FE
+            &:active
+                opacity: 0.5
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        margin-top: 60px
+    &__select
+        display: inline-block
+        position: relative
+        margin-left: 30px
+        &_active
+            .service__select-body
+                display: block
+        &-header
+            cursor: pointer
+        &-current
+            position: relative
+            font-size: 16px
+            color: $blue
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                top: 1px
+                right: -25px
+                width: 14px
+                height: 17px  
+                background: url('../img/icons/select-arrow.svg') center no-repeat
+                transition: 0.3s all ease-in-out
+            &_active
+                &::after
+                    transform: rotate(180deg)
+        &-body
+            display: none
+            position: absolute
+            top: 100%
+            left: 0
+            right: 0
+        &-item
+            margin-top: 15px
+            font-size: 16px
+            color: $blue
+            cursor: pointer
+            @media (min-width: 992px)
+                &:hover
+                    color: #8DD3FE
+                &:active
+                    opacity: 0.3
+    &__centres
+        display: none
+        margin-top: 27px
+        list-style: none
+        &_active
+            display: block
+        &-title
+            display: inline-block
+        &-show
+            margin-left: 15px
+            color: $blue
+            @include link
+        &-address
+            display: inline-block
+            position: relative
+            margin-top: 15px
+            margin-left: 25px
+            &::before
+                top: -4px
+                left: -23px
+                width: 14px
+                height: 21.5px 
+                background: url('../img/icons/address.svg') center no-repeat 
+        &-call
+            display: inline-block
+            position: relative
+            margin-top: 15px
+            margin-left: 25px
+            @include link
+            &::before
+                top: -4px
+                left: -23px
+                width: 19px
+                height: 19.2px 
+                background: url('../img/icons/call.svg') center no-repeat 
+        &-mail
+            display: inline-block
+            position: relative
+            margin-top: 15px
+            margin-left: 80px
+            @include link
+            &::before
+                top: 0
+                left: -25px
+                width: 19px
+                height: 14px 
+                background: url('../img/icons/mail.svg') center no-repeat 
+        &-address, &-call, &-mail
+            &::before
+                content: ''
+                display: block
+                position: absolute
+    &__dm
+        display: none
+        margin-top: 20px
+        font-size: 17px
+        &_active
+            display: block
+    
+                
+                 
+                
+
+        
+

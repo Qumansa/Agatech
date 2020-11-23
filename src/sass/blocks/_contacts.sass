@@ -1,0 +1,73 @@
+.contacts
+    padding: 70px 0 80px 0
+    background-color: $lightblueC
+    &__wrapper
+        display: flex
+        justify-content: space-between
+    &__info
+        display: inline-block
+        max-width: 600px
+    &__subtitle
+        margin-top: 45px
+    &__address
+        display: block
+        position: relative
+        margin-top: 15px
+        margin-left: 30px
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: -4px
+            left: -28px
+            width: 14px
+            height: 21.5px  
+            background: url('../img/icons/address.svg') center no-repeat
+    &__call
+        display: block
+        margin-top: 35px
+        font-size: 36px
+        color: $blue
+        @include link
+        &-descr
+            display: block
+            margin-top: 20px
+    &__mail
+        display: block
+        position: relative
+        margin-top: 20px
+        margin-left: 35px
+        color: $blue
+        @include link
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 1px
+            left: -33px
+            width: 19px
+            height: 13px  
+            background: url('../img/icons/mail-blue.svg') center no-repeat
+    &__list 
+        display: flex
+        margin-top: 32px
+        list-style: none
+        &-leftpart
+            max-width: 160px
+            width: 100%
+        &-rightpart
+            margin-left: 120px
+            max-width: 250px
+            width: 100%
+    &__item
+        &:not(:first-child)
+            margin-top: 35px
+        &-descr
+            display: block
+            margin-top: 10px
+    &__sublist
+        list-style: none
+        &-item
+            margin-top: 14px
+            & b
+                font-weight: bold

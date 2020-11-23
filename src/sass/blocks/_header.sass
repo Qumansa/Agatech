@@ -1,0 +1,57 @@
+.header
+    position: relative
+    background-color: $lightblueC
+    box-shadow: 0px 2px 4px rgba(71, 120, 165, 0.22)
+    z-index: 3
+    &__wrapper
+        display: flex
+        width: 100%
+        height: 80px
+    &__logo 
+        margin-top: 12px
+        width: 170px
+        cursor: pointer
+        &-img2
+            margin-top: 22px
+            margin-left: 12px
+    &__nav
+        margin-top: 37px
+        margin-left: 116px
+    &__list
+        display: flex
+        justify-content: space-between
+        list-style: none
+    &__item
+        &:not(:first-child)
+            margin-left: 55px
+    &__link
+        @include link
+    &__call
+        margin-top: 28px
+        margin-left: 135px
+        font-size: 24px
+        line-height: 29px
+        @include link
+    &__phone
+        display: block
+        position: relative
+        margin-left: 38px
+        width: 80px
+        height: 80px
+        background-color: $blue
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translateX(-50%) translateY(-50%)
+            width: 29px
+            height: 29px
+            background: url("../img/icons/header-call.svg") center no-repeat
+    &__hamburger
+        display: none
+             
+
+
+

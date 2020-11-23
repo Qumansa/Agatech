@@ -1,0 +1,119 @@
+.shops
+    padding-top: 65px
+    background-color: $lightblueC
+    &_active
+        display: block
+    &__wrapper
+        display: flex
+        justify-content: space-between
+    &__info
+        max-width: 660px
+        width: 100%
+        @media (min-width: 992px)
+            overflow-y: scroll
+    &__title
+        display: inline-block
+        margin-top: 10px
+    &__select
+        display: inline-block
+        position: relative
+        margin-left: 30px
+        &_active
+            .shops__select-body
+                display: block
+        &-header
+            cursor: pointer
+        &-current
+            position: relative
+            font-size: 16px
+            color: $blue
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                top: 1px
+                right: -25px
+                width: 14px
+                height: 17px  
+                background: url('../img/icons/select-arrow.svg') center no-repeat
+                transition: 0.3s all ease-in-out
+            &_active
+                &::after
+                    transform: rotate(180deg)
+        &-body
+            display: none
+            position: absolute
+            top: 100%
+            left: 0
+            right: 0
+        &-item
+            margin-top: 15px
+            font-size: 16px
+            color: $blue
+            cursor: pointer
+            @media (min-width: 992px)
+                &:hover
+                    color: #8DD3FE
+                &:active
+                    opacity: 0.3
+    &__list
+        display: none
+        margin-top: 38px
+        list-style: none
+        &_active
+            display: block
+    &__item 
+        &:not(:first-child)
+            margin-top: 30px
+        &-title
+            display: inline-block
+        &-show
+            margin-left: 15px
+            color: $blue
+            @include link
+        &-address
+            display: inline-block
+            position: relative
+            margin-top: 15px
+            margin-left: 25px
+            &::before
+                top: -4px
+                left: -23px
+                width: 14px
+                height: 21.5px 
+                background: url('../img/icons/address.svg') center no-repeat 
+        &-call
+            display: inline-block
+            position: relative
+            margin-top: 15px
+            margin-left: 25px
+            @include link
+            &::before
+                top: -4px
+                left: -23px
+                width: 19px
+                height: 19.2px 
+                background: url('../img/icons/call.svg') center no-repeat 
+        &-website
+            display: inline-block
+            position: relative
+            margin-top: 15px
+            margin-left: 80px
+            @include link
+            &::before
+                top: -2px
+                left: -25px
+                width: 18px
+                height: 18px 
+                background: url('../img/icons/website.svg') center no-repeat 
+        &-address, &-call, &-website
+            &::before
+                content: ''
+                display: block
+                position: absolute
+    &__dm
+        display: none
+        margin-top: 20px
+        font-size: 17px
+        &_active
+            display: block
